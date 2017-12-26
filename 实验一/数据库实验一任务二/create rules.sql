@@ -1,0 +1,1 @@
+CREATE RULE 年龄规则 As @年龄>=12 and @年龄<=28

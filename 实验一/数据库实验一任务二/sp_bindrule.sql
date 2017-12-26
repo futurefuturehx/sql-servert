@@ -1,0 +1,1 @@
+EXEC sp_bindrule 年龄规则,'学生.年龄'

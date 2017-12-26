@@ -1,0 +1,22 @@
+--使用AFTER
+CREATE TRIGGER tri_c1
+ON course
+AFTER UPDATE
+AS
+	IF UPDATE(courseno)
+		BEGIN
+		RAISERROR('不能修改课程号',16,2)
+		ROLLBACK
+	END
+GO
+--使用INSTEAD OF
+CREATE TRIGGER tri_c2
+ON course
+INSTEAD OF DELETE
+AS
+IF UPDATE(courseno)
+	BEGIN
+	 RAISERROR('不能修改课程号',16,2)
+	 ROLLBACK
+	END
+GO

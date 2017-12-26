@@ -1,0 +1,25 @@
+CREATE DATABASE Archieves
+ON PRIMARY
+(NAME=Arc_dat,
+FILENAME='C:\Archievesdata\Arcdat.mdf',
+SIZE=10,
+MAXSIZE=50,
+FILEGROWTH=15%),
+FILEGROUP ArcGrp1
+(NAME=Arc_dat1,
+FILENAME='C:\Archievesdata\Arcdat1.ndf',
+SIZE=10,
+MAXSIZE=50,
+FILEGROWTH=5),
+(NAME=Arc_dat2,
+FILENAME='C:\Archievesdata\Arcdat2.ndf',
+SIZE=10,
+MAXSIZE=50,
+FILEGROWTH=5)
+LOG ON
+(NAME=Arc_log1,
+FILENAME='E:\Archievesdata\Arclog1.ldf',
+SIZE=5MB,
+MAXSIZE=25MB,
+FILEGROWTH=5MB);
+GO

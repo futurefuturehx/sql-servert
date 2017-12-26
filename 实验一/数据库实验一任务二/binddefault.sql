@@ -1,0 +1,1 @@
+EXEC sp_bindefault '默认课程','学生.专业名'

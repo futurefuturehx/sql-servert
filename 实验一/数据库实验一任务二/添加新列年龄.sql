@@ -1,0 +1,1 @@
+alter table 学生 add "年龄" tinyint check(年龄>=12 and 年龄<=28)
